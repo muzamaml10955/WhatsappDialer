@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ Button button;
 
                 boolean isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp");
                 if (isWhatsappInstalled) {
+
                     Uri uri = Uri.parse("smsto:" + number);
                     Intent sendIntent = new Intent(Intent.ACTION_SENDTO, uri);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, "Hai Good Morning");
@@ -52,6 +54,13 @@ Button button;
             }
         });
     }
+
+
+
+
+
+
+
     private boolean whatsappInstalledOrNot(String uri) {
         PackageManager pm = getPackageManager();
         boolean app_installed = false;

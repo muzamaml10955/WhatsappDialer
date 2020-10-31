@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:id="@+id/editTextPhone"
         android:layout_marginHorizontal="20dp"
-
+android:hint="+92 303 1234567"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
