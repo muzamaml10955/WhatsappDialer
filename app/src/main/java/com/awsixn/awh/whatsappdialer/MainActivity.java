@@ -38,7 +38,8 @@ Button button;
                     sendIntent.setPackage("com.whatsapp");
                     startActivity(sendIntent);
                 } else {
-                   // Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(MainActivity.this,"WhatsApp not Installed", Toast.LENGTH_SHORT).show();
                     Uri uri = Uri.parse("market://details?id=com.whatsapp");
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(goToMarket);
