@@ -34,11 +34,23 @@ Button button;
                 boolean isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp");
                 if (isWhatsappInstalled) {
 
+
+                    String phoneNumberWithCountryCode = number;
+                    String message = "A.O.A";
+
+                    startActivity(
+                            new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse(
+                                            String.format("https://api.whatsapp.com/send?phone=%s&text=%s", phoneNumberWithCountryCode, message)
+                                    )
+                            )
+                    );
+/*
                     Uri uri = Uri.parse("smsto:" + number);
                     Intent sendIntent = new Intent(Intent.ACTION_SENDTO, uri);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, "Hai Good Morning");
                     sendIntent.setPackage("com.whatsapp");
-                    startActivity(sendIntent);
+                    startActivity(sendIntent);*/
                 } else {
 
                     Toast.makeText(MainActivity.this,"WhatsApp not Installed", Toast.LENGTH_SHORT).show();
