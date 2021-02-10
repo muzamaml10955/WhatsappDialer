@@ -127,7 +127,13 @@ Button button;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadad();
+                if(editText.getText().toString().length()<9)
+                {
+                    editText.setError("number should contain countery_code & more than 9 char. long");
+
+                }
+                else{
+                 loadad();}
 
 
 
