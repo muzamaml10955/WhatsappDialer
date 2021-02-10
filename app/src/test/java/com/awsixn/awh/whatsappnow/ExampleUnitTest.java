@@ -1,4 +1,4 @@
-package com.awsixn.awh.whatsappdialer;
+package com.awsixn.awh.whatsappnow;
 
 import org.junit.Test;
 

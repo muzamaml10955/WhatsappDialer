@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Whatsapp Dialer</string>
+    <string name="app_name">Whatsapp Now</string>
+    <string name="numberhint">+92 303 1234567</string>
+    <string name="buttontext">whatsapp</string>
 </resources>

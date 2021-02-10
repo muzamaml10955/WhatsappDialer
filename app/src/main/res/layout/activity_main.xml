@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
     <EditText
-
-        android:layout_centerInParent="true"
         android:id="@+id/editTextPhone"
-        android:layout_marginHorizontal="20dp"
-android:hint="+92 303 1234567"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/edittextbg"
+        android:drawableLeft="@drawable/ic_baseline_wifi_calling_24"
         android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/numberhint"
         android:inputType="phone"
+        android:paddingLeft="3dp"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="120dp" />
+
     <Button
+        android:id="@+id/whatsappbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="whatsapp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_below="@+id/editTextPhone"
-        android:id="@+id/whatsappbutton"
+        android:layout_below="@+id/adView_banner_admob"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/buttonbg"
+        android:gravity="center"
+        android:text="@string/buttontext"
+        android:textSize="20sp"
+        android:textStyle="italic"
         />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="25dp"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@android:color/holo_green_dark"
+        android:shadowColor="#000"
+        android:shadowDx="0"
+        android:shadowDy="30"
+        android:shadowRadius="50"
+
+        app:cardCornerRadius="12dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_banner_admob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+
 </RelativeLayout>
